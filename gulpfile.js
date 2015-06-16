@@ -2,6 +2,11 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var connect = require('gulp-connect');
 
+function handleError(error) {
+  console.error(error);
+  this.emit('end');
+};
+
 gulp.task('watch', function watch() {
   gulp.watch(['./app/*.html'], ['reload']);
   gulp.watch(['./app/*.js'], ['reload']);
@@ -17,7 +22,8 @@ gulp.task('reload', function reload() {
 
 gulp.task('scss', function scss() {
   return gulp.src('./app/*.scss')
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass())
+    .on('error', handleError)
     .pipe(gulp.dest('./app'));
 });
 
