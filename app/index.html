@@ -10,21 +10,21 @@
     <link rel="stylesheet" type="text/css" href="app.css">
   </head>
 
-  <body class="toc-static-body">
-    <div class="toc-static-landing-content">
-      <header class="toc-static-landing-header">
+  <body class="toc-body">
+    <div class="toc-landing-content">
+      <header class="toc-landing-header">
 
       </header>
-      <section class="toc-static-call-to-action-section toc-static-fullscreen-section">
-        <div class="toc-static-fullscreen-container">
-          <div class="toc-static-call-to-action-content">
-            <div class="toc-static-call-to-action-heading">
+      <section id="toc-call-to-action-section" class="toc-fullscreen-section">
+        <div class="toc-fullscreen-container">
+          <div class="toc-call-to-action-content">
+            <div class="toc-call-to-action-heading">
               <h1>
                 Toc is a different kind of messaging app
               </h1>
             </div>
 
-            <div class="toc-static-call-to-action-message">
+            <div class="toc-call-to-action-message">
               <p>
                 Toc does not collect data from users.
               </p>
@@ -41,32 +41,32 @@
               </p>
             </div>
 
-            <div class="toc-static-call-to-action-actions">
-              <div class="toc-static-call-to-action-action">
-                <button class="toc-static-button toc-static-primary-button">
-                  Sign me up!
+            <div class="toc-call-to-action-actions">
+              <div class="toc-call-to-action-action">
+                <button type="button" class="toc-button toc-primary-button">
+                  Sign me up
                 </button>
               </div>
-              <div class="toc-static-call-to-action-action">
-                <button class="toc-static-button">
-                  Tell me more!
-                </button>
+              <div id="toc-call-to-action-tell-me-more" class="toc-call-to-action-action">
+                <a class="toc-button" href="#toc-features-section" data-scroll>
+                  Tell me more
+                </a>
               </div>
-              <div class="toc-static-call-to-action-action toc-static-call-to-action-hidden-action">
-                <button class="toc-static-button">
+              <!-- <div class="toc-call-to-action-action toc-call-to-action-hidden-action">
+                <button type="button" class="toc-button">
                   What can it do?
                 </button>
               </div>
-              <div class="toc-static-call-to-action-action toc-static-call-to-action-hidden-action">
-                <button class="toc-static-button">
+              <div class="toc-call-to-action-action toc-call-to-action-hidden-action">
+                <button type="button" class="toc-button">
                   Why should I care?
                 </button>
               </div>
-              <div class="toc-static-call-to-action-action toc-static-call-to-action-hidden-action">
-                <button class="toc-static-button">
+              <div class="toc-call-to-action-action toc-call-to-action-hidden-action">
+                <button type="button" class="toc-button">
                   Why should I trust you?
                 </button>
-              </div>
+              </div> -->
             </div>
             <!-- [I'm sold. Sign me up!]
 
@@ -92,23 +92,35 @@
 
             [Show me the code.] -->
           </div>
-          <div class="toc-static-call-to-action-images">
-            <div class="toc-static-call-to-action-image-container">
-              <div class="toc-static-call-to-action-image-phone">
+          <div class="toc-call-to-action-images">
+            <div class="toc-call-to-action-image-container">
+              <div class="toc-call-to-action-image-phone">
 
               </div>
             </div>
           </div>
         </div>
-        <!-- <div class="toc-static-section-footer">
+        <!-- <div class="toc-section-footer">
 
         </div> -->
       </section>
-      <section class="toc-static-fullscreen-section">
-        <div class="toc-static-call-to-action-container">
+      <section id="toc-features-section" class="toc-fullscreen-section">
+        <div class="toc-call-to-action-container">
+  Test
+        </div>
+      </section>
+      <section id="toc-motivations-section" class="toc-fullscreen-section">
+        <div class="toc-call-to-action-container">
+  Test
+        </div>
+      </section>
+      <section id="toc-implementation-section" class="toc-fullscreen-section">
+        <div class="toc-call-to-action-container">
   Test
         </div>
       </section>
     </div>
+    <script src="dependencies/smooth-scroll.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>

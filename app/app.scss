@@ -1,39 +1,39 @@
-$tablet-width: 768px;
-$notebook-half-width: 940px;
-$notebook-width: 1200px;
-$desktop-width: 1600px;
+$toc-tablet-width: 768px;
+$toc-notebook-half-width: 940px;
+$toc-notebook-width: 1200px;
+$toc-desktop-width: 1600px;
 
-@mixin toc-static-landing-font($font-size) {
+@mixin toc-landing-font($font-size) {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: $font-size * 3/4;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $toc-tablet-width) {
     font-size: $font-size;
   }
 }
 
-@mixin toc-static-margin-bottom($margin-size) {
+@mixin toc-margin-bottom($margin-size) {
   margin-bottom: $margin-size * 3/4;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $toc-tablet-width) {
     margin-bottom: $margin-size;
   }
 }
 
-$primary-color: #387EF5;
-$light-color: #D9E7FF;
-$white-color: #FFFFFF;
+$toc-primary-color: #387EF5;
+$toc-light-color: #D9E7FF;
+$toc-white-color: #FFFFFF;
 
-.toc-static-body {
+.toc-body {
   margin: 0;
   // overflow: hidden;
 }
 
-.toc-static-landing-content {
+.toc-landing-content {
   // overflow: scroll;
 }
 
-.toc-static-fullscreen-section {
+.toc-fullscreen-section {
   min-height: 100vh;
   display: flex;
   flex-direction: row;
@@ -41,58 +41,61 @@ $white-color: #FFFFFF;
   align-items: center;
 }
 
-.toc-static-button {
-  color: $light-color;
-  border: 2px solid $light-color;
+.toc-button {
+  display: block;
+  box-sizing: border-box;
+  color: $toc-light-color;
+  border: 2px solid $toc-light-color;
   background: none;
   box-shadow: none;
   font-weight: 300;
   width: 100%;
   padding: 9px 18px;
-  @media (min-width: $tablet-width) {
+  text-decoration: none;
+  @media (min-width: $toc-tablet-width) {
     padding: 12px 24px;
   }
-  @include toc-static-landing-font(24px);
+  @include toc-landing-font(24px);
 
   transition: 0.1s linear;
 
   &:hover {
-    color: $white-color;
-    border-color: $white-color;
+    color: $toc-white-color;
+    border-color: $toc-white-color;
   }
 
   &:active {
-    background: $white-color;
-    color: $primary-color;
+    background: $toc-white-color;
+    color: $toc-primary-color;
   }
 }
 
-.toc-static-primary-button {
-  background: $light-color;
-  color: $primary-color;
+.toc-primary-button {
+  background: $toc-light-color;
+  color: $toc-primary-color;
   padding: 9px 18px;
-  @media (min-width: $tablet-width) {
+  @media (min-width: $toc-tablet-width) {
     padding: 12px 24px;
   }
-  @include toc-static-landing-font(24px);
+  @include toc-landing-font(24px);
 
   &:hover {
-    color: $primary-color;
-    background: $white-color;
-    border-color: $white-color;
+    color: $toc-primary-color;
+    background: $toc-white-color;
+    border-color: $toc-white-color;
   }
 
   &:active {
     background: none;
-    color: $light-color;
+    color: $toc-light-color;
   }
 }
 
-.toc-static-call-to-action-section {
-  background-color: $primary-color;
+#toc-call-to-action-section {
+  background-color: $toc-primary-color;
 }
 
-.toc-static-fullscreen-container {
+.toc-fullscreen-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -102,7 +105,7 @@ $white-color: #FFFFFF;
   text-align: center;
 }
 
-.toc-static-call-to-action-content {
+.toc-call-to-action-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -111,43 +114,42 @@ $white-color: #FFFFFF;
   padding: 25px;
 }
 
-.toc-static-call-to-action-heading {
-  @include toc-static-margin-bottom(24px);
+.toc-call-to-action-heading {
+  @include toc-margin-bottom(24px);
 
   h1 {
-    @include toc-static-landing-font(40px);
-    color: $light-color;
+    @include toc-landing-font(40px);
+    color: $toc-light-color;
     font-weight: 300;
     margin: 0;
   }
 }
 
-.toc-static-call-to-action-message {
-  @include toc-static-margin-bottom(24px);
+.toc-call-to-action-message {
+  @include toc-margin-bottom(24px);
 
   p {
-    @include toc-static-landing-font(24px);
-    @include toc-static-margin-bottom(16px);
+    @include toc-landing-font(24px);
+    @include toc-margin-bottom(16px);
     margin-top: 0;
-    color: $light-color;
+    color: $toc-light-color;
   }
 }
 
-.toc-static-call-to-action-actions {
+.toc-call-to-action-actions {
   max-width: 400px;
   width: 90%;
 }
 
-.toc-static-call-to-action-action {
+.toc-call-to-action-action {
   flex: 1 1 auto;
-  @include toc-static-margin-bottom(16px);
+  @include toc-margin-bottom(16px);
 }
 
-.toc-static-call-to-action-hidden-action {
-  display: none;
+.toc-call-to-action-hidden-action {
 }
 
-.toc-static-call-to-action-images {
+.toc-call-to-action-images {
   flex: 1 1 200px;
   display: flex;
   padding: 25px;
@@ -156,7 +158,7 @@ $white-color: #FFFFFF;
   align-items: center;
 }
 
-.toc-static-call-to-action-image-phone {
+.toc-call-to-action-image-phone {
   width: 200px;
   height: 405px;
   background: url(assets/images/phone.svg);
